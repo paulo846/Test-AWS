@@ -3,3 +3,9 @@ os: linux
 files:
   - source: /
     destination: /www/wwwroot/igrsistemas.com
+permissions:
+  - object: /www/wwwroot/igrsistemas.com/writable/
+    pattern: "**"
+    owner: nginx
+    group: nginx
+    mode: 755
