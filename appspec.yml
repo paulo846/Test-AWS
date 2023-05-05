@@ -1,0 +1,28 @@
+version: 0.0
+os: linux
+files:
+  - source: 
+    destination: /var/www/igrsistemas.com/
+    authentication: GitHubPersonalAccessToken
+permissions:
+  - object: /var/www/igrsistemas.com/writable/
+    pattern: "**"
+    owner: nginx
+    group: nginx
+    mode: 755
+hooks:
+  BeforeInstall:
+    - location: scripts/limpa_cache.sh
+      timeout: 300
+      runas: root
+    - location: scripts/limpa_logs.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/chown.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/reinicia_servicos.sh
+      timeout: 300
+      runas: root
