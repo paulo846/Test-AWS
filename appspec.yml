@@ -6,6 +6,6 @@ files:
 permissions:
   - object: /www/wwwroot/igrsistemas.com/writable/
     pattern: "**"
-    owner: nginx
-    group: nginx
+    owner: www
+    group: www
     mode: 755
