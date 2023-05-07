@@ -1,5 +1,3 @@
 #!/bin/bash
-cd /var/www/html
-mv rds.conf.php ../
-mv s3-conf.php ../
+cd /www/wwwroot/conect.app
 rm -R *
