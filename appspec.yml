@@ -2,10 +2,4 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /www/wwwroot/igrsistemas.com
-permissions:
-  - object: /www/wwwroot/igrsistemas.com/writable/
-    pattern: "**"
-    owner: www
-    group: www
-    mode: 755
+    destination: /www/wwwroot/igrsistemas.com/
