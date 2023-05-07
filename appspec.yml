@@ -3,12 +3,3 @@ os: linux
 files:
   - source: /
     destination: /www/wwwroot/conect.app
-hooks:
-    BeforeInstall:
-    - location: scripts/antes.sh
-      timeout: 30
-      runas: root
-    AfterInstall:
-    - location: scripts/depois.sh
-      timeout: 30
-      runas: root
