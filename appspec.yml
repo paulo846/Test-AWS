@@ -2,8 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: app/
-    destination: /www/wwwroot/igrsistemas.com
-    owner: nginx
+    destination: /www/wwwroot/igrsistemas.com/
 hooks:
     BeforeInstall:
     - location: scripts/antes.sh
