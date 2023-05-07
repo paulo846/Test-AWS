@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: app/
-    destination: /www/wwwroot/igrsistemas.com/
+  - source: /
+    destination: /www/wwwroot/conect.app
 hooks:
     BeforeInstall:
     - location: scripts/antes.sh
