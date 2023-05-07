@@ -2,4 +2,14 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html
+    destination: /www/wwwroot/igrsistemas.com
+    owner: nginx
+hooks:
+    BeforeInstall:
+    - location: scripts/antes.sh
+      timeout: 30
+      runas: root
+    AfterInstall:
+    - location: scripts/depois.sh
+      timeout: 30
+      runas: root
